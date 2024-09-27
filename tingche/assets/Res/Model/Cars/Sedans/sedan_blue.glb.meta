@@ -1,0 +1,188 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207",
+  "files": [],
+  "subMetas": {
+    "86317": {
+      "importer": "gltf-mesh",
+      "uuid": "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@86317",
+      "displayName": "",
+      "id": "86317",
+      "name": "Plane.051.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 54
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4a274": {
+      "importer": "gltf-mesh",
+      "uuid": "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@4a274",
+      "displayName": "",
+      "id": "4a274",
+      "name": "Plane.027.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b14a3": {
+      "importer": "gltf-mesh",
+      "uuid": "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@b14a3",
+      "displayName": "",
+      "id": "b14a3",
+      "name": "Plane.028.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2425e": {
+      "importer": "gltf-mesh",
+      "uuid": "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@2425e",
+      "displayName": "",
+      "id": "2425e",
+      "name": "Plane.029.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f4953": {
+      "importer": "gltf-mesh",
+      "uuid": "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@f4953",
+      "displayName": "",
+      "id": "f4953",
+      "name": "Plane.030.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c2f9c": {
+      "importer": "gltf-mesh",
+      "uuid": "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@c2f9c",
+      "displayName": "",
+      "id": "c2f9c",
+      "name": "Plane.026.mesh",
+      "userData": {
+        "gltfIndex": 5,
+        "triangleCount": 374
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "551ec": {
+      "importer": "gltf-material",
+      "uuid": "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@551ec",
+      "displayName": "",
+      "id": "551ec",
+      "name": "Material.005.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3a75d": {
+      "importer": "gltf-scene",
+      "uuid": "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@3a75d",
+      "displayName": "",
+      "id": "3a75d",
+      "name": "sedan_blue.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@86317",
+        "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@4a274",
+        "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@b14a3",
+        "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@2425e",
+        "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@f4953",
+        "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@c2f9c"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@551ec"
+      ],
+      "scenes": [
+        "6ad4da1c-3f9c-4d07-a072-7b03fd1bc207@3a75d"
+      ]
+    }
+  }
+}

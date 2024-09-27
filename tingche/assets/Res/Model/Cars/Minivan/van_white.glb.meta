@@ -1,0 +1,94 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "20ddeae6-aca3-42cd-8df3-24fd98b14db9",
+  "files": [],
+  "subMetas": {
+    "5ebf2": {
+      "importer": "gltf-mesh",
+      "uuid": "20ddeae6-aca3-42cd-8df3-24fd98b14db9@5ebf2",
+      "displayName": "",
+      "id": "5ebf2",
+      "name": "Plane.113.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 8
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8414f": {
+      "importer": "gltf-mesh",
+      "uuid": "20ddeae6-aca3-42cd-8df3-24fd98b14db9@8414f",
+      "displayName": "",
+      "id": "8414f",
+      "name": "Plane.102.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 390
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fba0b": {
+      "importer": "gltf-scene",
+      "uuid": "20ddeae6-aca3-42cd-8df3-24fd98b14db9@fba0b",
+      "displayName": "",
+      "id": "fba0b",
+      "name": "van_white.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "20ddeae6-aca3-42cd-8df3-24fd98b14db9@5ebf2",
+        "20ddeae6-aca3-42cd-8df3-24fd98b14db9@8414f"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "20ddeae6-aca3-42cd-8df3-24fd98b14db9@fba0b"
+      ]
+    }
+  }
+}

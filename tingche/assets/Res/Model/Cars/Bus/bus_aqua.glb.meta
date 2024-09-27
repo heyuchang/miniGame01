@@ -1,0 +1,94 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "10e34f4e-492a-4521-8377-d377a967ce81",
+  "files": [],
+  "subMetas": {
+    "239cf": {
+      "importer": "gltf-mesh",
+      "uuid": "10e34f4e-492a-4521-8377-d377a967ce81@239cf",
+      "displayName": "",
+      "id": "239cf",
+      "name": "Plane.082.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 34
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "500f2": {
+      "importer": "gltf-mesh",
+      "uuid": "10e34f4e-492a-4521-8377-d377a967ce81@500f2",
+      "displayName": "",
+      "id": "500f2",
+      "name": "Plane.083.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 492
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b48b7": {
+      "importer": "gltf-scene",
+      "uuid": "10e34f4e-492a-4521-8377-d377a967ce81@b48b7",
+      "displayName": "",
+      "id": "b48b7",
+      "name": "bus_aqua.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "10e34f4e-492a-4521-8377-d377a967ce81@239cf",
+        "10e34f4e-492a-4521-8377-d377a967ce81@500f2"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "10e34f4e-492a-4521-8377-d377a967ce81@b48b7"
+      ]
+    }
+  }
+}

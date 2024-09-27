@@ -1,0 +1,112 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "1b3d682c-2a13-44e4-a6e4-5d35bbf73316",
+  "files": [],
+  "subMetas": {
+    "99380": {
+      "importer": "gltf-material",
+      "uuid": "1b3d682c-2a13-44e4-a6e4-5d35bbf73316@99380",
+      "displayName": "",
+      "id": "99380",
+      "name": "Material.001.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "00d55": {
+      "importer": "gltf-mesh",
+      "uuid": "1b3d682c-2a13-44e4-a6e4-5d35bbf73316@00d55",
+      "displayName": "",
+      "id": "00d55",
+      "name": "Plane.021.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 34
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a5f8b": {
+      "importer": "gltf-mesh",
+      "uuid": "1b3d682c-2a13-44e4-a6e4-5d35bbf73316@a5f8b",
+      "displayName": "",
+      "id": "a5f8b",
+      "name": "Plane.001.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 492
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b9874": {
+      "importer": "gltf-scene",
+      "uuid": "1b3d682c-2a13-44e4-a6e4-5d35bbf73316@b9874",
+      "displayName": "",
+      "id": "b9874",
+      "name": "bus_green.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "1b3d682c-2a13-44e4-a6e4-5d35bbf73316@00d55",
+        "1b3d682c-2a13-44e4-a6e4-5d35bbf73316@a5f8b"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "1b3d682c-2a13-44e4-a6e4-5d35bbf73316@99380"
+      ],
+      "scenes": [
+        "1b3d682c-2a13-44e4-a6e4-5d35bbf73316@b9874"
+      ]
+    }
+  }
+}

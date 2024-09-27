@@ -1,0 +1,99 @@
+{
+  "ver": "2.3.13",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "622bd4d5-f8de-45a0-b6ac-28fd28b9750b",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "18d6f": {
+      "importer": "gltf-animation",
+      "uuid": "622bd4d5-f8de-45a0-b6ac-28fd28b9750b@18d6f",
+      "displayName": "",
+      "id": "18d6f",
+      "name": "SitTalking.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 44.06666564941406
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "09fcc": {
+      "importer": "gltf-scene",
+      "uuid": "622bd4d5-f8de-45a0-b6ac-28fd28b9750b@09fcc",
+      "displayName": "",
+      "id": "09fcc",
+      "name": "Sitting Talking.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 44.06666564941406,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "SitTalking",
+            "from": 0,
+            "to": 44.06666564941406,
+            "wrapMode": 2,
+            "previousId": "18d6f"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "622bd4d5-f8de-45a0-b6ac-28fd28b9750b@09fcc"
+      ]
+    }
+  }
+}

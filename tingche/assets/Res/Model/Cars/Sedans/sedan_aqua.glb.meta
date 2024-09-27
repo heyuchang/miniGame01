@@ -1,0 +1,94 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "99d5c740-5314-420d-b128-12291460512f",
+  "files": [],
+  "subMetas": {
+    "f22ea": {
+      "importer": "gltf-mesh",
+      "uuid": "99d5c740-5314-420d-b128-12291460512f@f22ea",
+      "displayName": "",
+      "id": "f22ea",
+      "name": "Plane.069.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 54
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "180d1": {
+      "importer": "gltf-mesh",
+      "uuid": "99d5c740-5314-420d-b128-12291460512f@180d1",
+      "displayName": "",
+      "id": "180d1",
+      "name": "Plane.072.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 372
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "72d8f": {
+      "importer": "gltf-scene",
+      "uuid": "99d5c740-5314-420d-b128-12291460512f@72d8f",
+      "displayName": "",
+      "id": "72d8f",
+      "name": "sedan_aqua.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "99d5c740-5314-420d-b128-12291460512f@f22ea",
+        "99d5c740-5314-420d-b128-12291460512f@180d1"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "99d5c740-5314-420d-b128-12291460512f@72d8f"
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "f8eeaa8f-babe-48e7-8e00-0193a7af61f9",
+  "files": [],
+  "subMetas": {
+    "3a2a7": {
+      "importer": "gltf-mesh",
+      "uuid": "f8eeaa8f-babe-48e7-8e00-0193a7af61f9@3a2a7",
+      "displayName": "",
+      "id": "3a2a7",
+      "name": "Cube.952.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 58
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "09d61": {
+      "importer": "gltf-scene",
+      "uuid": "f8eeaa8f-babe-48e7-8e00-0193a7af61f9@09d61",
+      "displayName": "",
+      "id": "09d61",
+      "name": "road.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "f8eeaa8f-babe-48e7-8e00-0193a7af61f9@3a2a7"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "f8eeaa8f-babe-48e7-8e00-0193a7af61f9@09d61"
+      ]
+    }
+  }
+}

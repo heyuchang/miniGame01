@@ -1,0 +1,94 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "f8edcdc1-7b5d-4f5f-b427-525f1343d842",
+  "files": [],
+  "subMetas": {
+    "25962": {
+      "importer": "gltf-mesh",
+      "uuid": "f8edcdc1-7b5d-4f5f-b427-525f1343d842@25962",
+      "displayName": "",
+      "id": "25962",
+      "name": "Plane.115.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 8
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d97cd": {
+      "importer": "gltf-mesh",
+      "uuid": "f8edcdc1-7b5d-4f5f-b427-525f1343d842@d97cd",
+      "displayName": "",
+      "id": "d97cd",
+      "name": "Plane.092.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 390
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "64a3b": {
+      "importer": "gltf-scene",
+      "uuid": "f8edcdc1-7b5d-4f5f-b427-525f1343d842@64a3b",
+      "displayName": "",
+      "id": "64a3b",
+      "name": "van_green.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "f8edcdc1-7b5d-4f5f-b427-525f1343d842@25962",
+        "f8edcdc1-7b5d-4f5f-b427-525f1343d842@d97cd"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "f8edcdc1-7b5d-4f5f-b427-525f1343d842@64a3b"
+      ]
+    }
+  }
+}

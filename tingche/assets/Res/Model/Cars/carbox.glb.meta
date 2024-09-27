@@ -1,0 +1,75 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "74e4f7d2-4bf9-4a02-931f-984314d7f25d",
+  "files": [],
+  "subMetas": {
+    "8823b": {
+      "importer": "gltf-mesh",
+      "uuid": "74e4f7d2-4bf9-4a02-931f-984314d7f25d@8823b",
+      "displayName": "",
+      "id": "8823b",
+      "name": "hex_grass_sloped_high.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 74
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "290cc": {
+      "importer": "gltf-scene",
+      "uuid": "74e4f7d2-4bf9-4a02-931f-984314d7f25d@290cc",
+      "displayName": "",
+      "id": "290cc",
+      "name": "carbox.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "74e4f7d2-4bf9-4a02-931f-984314d7f25d@8823b"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "74e4f7d2-4bf9-4a02-931f-984314d7f25d@290cc"
+      ]
+    }
+  }
+}

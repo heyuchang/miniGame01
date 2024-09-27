@@ -1,0 +1,94 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "e3db3117-e07a-4871-955c-c3e0fcf2bdfc",
+  "files": [],
+  "subMetas": {
+    "84993": {
+      "importer": "gltf-scene",
+      "uuid": "e3db3117-e07a-4871-955c-c3e0fcf2bdfc@84993",
+      "displayName": "",
+      "id": "84993",
+      "name": "van_aqua.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "723da": {
+      "importer": "gltf-mesh",
+      "uuid": "e3db3117-e07a-4871-955c-c3e0fcf2bdfc@723da",
+      "displayName": "",
+      "id": "723da",
+      "name": "Plane.124.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 8
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7b895": {
+      "importer": "gltf-mesh",
+      "uuid": "e3db3117-e07a-4871-955c-c3e0fcf2bdfc@7b895",
+      "displayName": "",
+      "id": "7b895",
+      "name": "Plane.125.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 390
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "e3db3117-e07a-4871-955c-c3e0fcf2bdfc@723da",
+        "e3db3117-e07a-4871-955c-c3e0fcf2bdfc@7b895"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "e3db3117-e07a-4871-955c-c3e0fcf2bdfc@84993"
+      ]
+    }
+  }
+}

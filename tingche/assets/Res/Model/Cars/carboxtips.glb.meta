@@ -1,0 +1,75 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "704fc483-508f-4113-8c94-95fb9c3d1e1a",
+  "files": [],
+  "subMetas": {
+    "c44f0": {
+      "importer": "gltf-mesh",
+      "uuid": "704fc483-508f-4113-8c94-95fb9c3d1e1a@c44f0",
+      "displayName": "",
+      "id": "c44f0",
+      "name": "Cube.040.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 60
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9520a": {
+      "importer": "gltf-scene",
+      "uuid": "704fc483-508f-4113-8c94-95fb9c3d1e1a@9520a",
+      "displayName": "",
+      "id": "9520a",
+      "name": "carboxtips.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "704fc483-508f-4113-8c94-95fb9c3d1e1a@c44f0"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "704fc483-508f-4113-8c94-95fb9c3d1e1a@9520a"
+      ]
+    }
+  }
+}

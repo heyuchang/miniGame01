@@ -1,0 +1,170 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426",
+  "files": [],
+  "subMetas": {
+    "14386": {
+      "importer": "gltf-mesh",
+      "uuid": "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@14386",
+      "displayName": "",
+      "id": "14386",
+      "name": "Plane.199.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "41914": {
+      "importer": "gltf-mesh",
+      "uuid": "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@41914",
+      "displayName": "",
+      "id": "41914",
+      "name": "Plane.197.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "42176": {
+      "importer": "gltf-mesh",
+      "uuid": "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@42176",
+      "displayName": "",
+      "id": "42176",
+      "name": "Plane.198.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "eb9db": {
+      "importer": "gltf-mesh",
+      "uuid": "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@eb9db",
+      "displayName": "",
+      "id": "eb9db",
+      "name": "Plane.114.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 8
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f369b": {
+      "importer": "gltf-mesh",
+      "uuid": "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@f369b",
+      "displayName": "",
+      "id": "f369b",
+      "name": "Plane.200.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 48
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d1c9e": {
+      "importer": "gltf-mesh",
+      "uuid": "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@d1c9e",
+      "displayName": "",
+      "id": "d1c9e",
+      "name": "Plane.201.mesh",
+      "userData": {
+        "gltfIndex": 5,
+        "triangleCount": 390
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "36a0b": {
+      "importer": "gltf-scene",
+      "uuid": "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@36a0b",
+      "displayName": "",
+      "id": "36a0b",
+      "name": "van_blue.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@eb9db",
+        "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@f369b",
+        "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@14386",
+        "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@42176",
+        "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@41914",
+        "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@d1c9e"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "b44bda0c-f4bf-4cb7-b7c5-acc4e7abf426@36a0b"
+      ]
+    }
+  }
+}

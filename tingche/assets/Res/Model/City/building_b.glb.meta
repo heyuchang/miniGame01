@@ -1,0 +1,94 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "4075ea1a-f413-4178-a75d-901cf7752aeb",
+  "files": [],
+  "subMetas": {
+    "41ac8": {
+      "importer": "gltf-mesh",
+      "uuid": "4075ea1a-f413-4178-a75d-901cf7752aeb@41ac8",
+      "displayName": "",
+      "id": "41ac8",
+      "name": "Cube.001.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 94
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d67b6": {
+      "importer": "gltf-mesh",
+      "uuid": "4075ea1a-f413-4178-a75d-901cf7752aeb@d67b6",
+      "displayName": "",
+      "id": "d67b6",
+      "name": "Cube.941.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 524
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "07bf1": {
+      "importer": "gltf-scene",
+      "uuid": "4075ea1a-f413-4178-a75d-901cf7752aeb@07bf1",
+      "displayName": "",
+      "id": "07bf1",
+      "name": "building_b.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "4075ea1a-f413-4178-a75d-901cf7752aeb@41ac8",
+        "4075ea1a-f413-4178-a75d-901cf7752aeb@d67b6"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "4075ea1a-f413-4178-a75d-901cf7752aeb@07bf1"
+      ]
+    }
+  }
+}

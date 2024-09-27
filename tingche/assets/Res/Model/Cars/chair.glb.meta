@@ -1,0 +1,75 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "c8349573-cd69-452d-acda-15354882576c",
+  "files": [],
+  "subMetas": {
+    "bc06f": {
+      "importer": "gltf-mesh",
+      "uuid": "c8349573-cd69-452d-acda-15354882576c@bc06f",
+      "displayName": "",
+      "id": "bc06f",
+      "name": "Cube.031.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 180
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4e90e": {
+      "importer": "gltf-scene",
+      "uuid": "c8349573-cd69-452d-acda-15354882576c@4e90e",
+      "displayName": "",
+      "id": "4e90e",
+      "name": "chair.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "c8349573-cd69-452d-acda-15354882576c@bc06f"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "c8349573-cd69-452d-acda-15354882576c@4e90e"
+      ]
+    }
+  }
+}

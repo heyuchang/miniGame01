@@ -1,0 +1,94 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "e4845306-f91f-4e7b-b6fa-a1a5cb3fbf92",
+  "files": [],
+  "subMetas": {
+    "c0842": {
+      "importer": "gltf-mesh",
+      "uuid": "e4845306-f91f-4e7b-b6fa-a1a5cb3fbf92@c0842",
+      "displayName": "",
+      "id": "c0842",
+      "name": "Plane.086.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 34
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "261a6": {
+      "importer": "gltf-mesh",
+      "uuid": "e4845306-f91f-4e7b-b6fa-a1a5cb3fbf92@261a6",
+      "displayName": "",
+      "id": "261a6",
+      "name": "Plane.087.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 492
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a3e4d": {
+      "importer": "gltf-scene",
+      "uuid": "e4845306-f91f-4e7b-b6fa-a1a5cb3fbf92@a3e4d",
+      "displayName": "",
+      "id": "a3e4d",
+      "name": "bus_brown.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "e4845306-f91f-4e7b-b6fa-a1a5cb3fbf92@c0842",
+        "e4845306-f91f-4e7b-b6fa-a1a5cb3fbf92@261a6"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "e4845306-f91f-4e7b-b6fa-a1a5cb3fbf92@a3e4d"
+      ]
+    }
+  }
+}

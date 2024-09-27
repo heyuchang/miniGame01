@@ -1,0 +1,94 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "decaadd1-0ca8-4f4c-91f5-2209a58ef43f",
+  "files": [],
+  "subMetas": {
+    "16016": {
+      "importer": "gltf-mesh",
+      "uuid": "decaadd1-0ca8-4f4c-91f5-2209a58ef43f@16016",
+      "displayName": "",
+      "id": "16016",
+      "name": "Plane.112.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 8
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "90063": {
+      "importer": "gltf-mesh",
+      "uuid": "decaadd1-0ca8-4f4c-91f5-2209a58ef43f@90063",
+      "displayName": "",
+      "id": "90063",
+      "name": "Plane.097.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 390
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "494a0": {
+      "importer": "gltf-scene",
+      "uuid": "decaadd1-0ca8-4f4c-91f5-2209a58ef43f@494a0",
+      "displayName": "",
+      "id": "494a0",
+      "name": "van_red.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "decaadd1-0ca8-4f4c-91f5-2209a58ef43f@16016",
+        "decaadd1-0ca8-4f4c-91f5-2209a58ef43f@90063"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "decaadd1-0ca8-4f4c-91f5-2209a58ef43f@494a0"
+      ]
+    }
+  }
+}
