@@ -59,14 +59,14 @@ export class bussColorsComponent extends Component {
     addRole(role: Node): boolean{
         const carPoint = this.node.parent
         role.setParent(this.node.getChildByName("Seets").children[this.roleNum],true)
-        role.getComponent(heroBussColorsComponent).playWalk()
+        role.getComponent(heroBussColorsComponent).startWalkAnimi()
         tween(role).to(0.2,{
             position: new Vec3(0,0,-0.1)
         }).call(()=>{
             this.tweenCount -= 1
             role.setScale(0.9,0.9,0.9)
             role.setRotationFromEuler(0,0,0)
-            role.getComponent(heroBussColorsComponent).playSit()
+            role.getComponent(heroBussColorsComponent).startSitAnimi()
             if (this.tweenCount <= 0 && this.isFull){
                 if(carPoint.getSiblingIndex()===7){
                     carPoint.name = "lock"

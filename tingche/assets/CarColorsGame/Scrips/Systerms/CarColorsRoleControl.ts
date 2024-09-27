@@ -101,9 +101,9 @@ export class CarColorsRoleControl extends Component {
             }
             const color = CarColorsEntryCreat.instance.carSysterm.carSeats.pop()
             const role = this.getRoleFromPool(color)
-            role.getComponent(heroBussColorsComponent).playIdle()
-            role.getComponent(heroBussColorsComponent).isHorizon = false
-            role.getComponent(heroBussColorsComponent).isIntarget = false
+            role.getComponent(heroBussColorsComponent).startIdleAnimi()
+            role.getComponent(heroBussColorsComponent).ishorizonStatus = false
+            role.getComponent(heroBussColorsComponent).isTargetArea = false
             role.setScale(1,1,1)
             role.active = false
             this.activeRole.set(role.uuid, role)
@@ -139,7 +139,7 @@ export class CarColorsRoleControl extends Component {
         const roles = [...find("Scene/Roles").children]
         if (roles.length === 0) return
         const roleCom = roles[0].getComponent(heroBussColorsComponent)
-        if (!roleCom.isIntarget) return
+        if (!roleCom.isTargetArea) return
         const points = find("Scene/Parkings").children
         let cars: Array<Node> = []
         let isEmpty = false
@@ -236,8 +236,8 @@ export class CarColorsRoleControl extends Component {
                 const roleCom = role.getComponent(heroBussColorsComponent)
                 if (!role.active){
                     role.active = true
-                    roleCom.playIdle()
-                    roleCom.isHorizon = false
+                    roleCom.startIdleAnimi()
+                    roleCom.ishorizonStatus = false
                     role.setRotationFromEuler(-40,0,0)
                     role.setPosition(-10, 0, -6 - index * 2)
                 }
@@ -246,7 +246,7 @@ export class CarColorsRoleControl extends Component {
                 role.getPosition(pos)
                 let wpos = role.getWorldPosition()
                 let forward = new Vec3(0,0,-1)
-                if (roleCom.isHorizon){
+                if (roleCom.ishorizonStatus){
                     forward = new Vec3(-1,0,0)
                 }
 
@@ -259,28 +259,28 @@ export class CarColorsRoleControl extends Component {
                 let mask = 1<<6
                 let ray = new geometry.Ray(wpos.x, wpos.y, wpos.z, add.x, 0, add.z)
                 if (PhysicsSystem.instance.raycastClosest(ray, mask, distance, true)) {
-                    roleCom.playIdle()
+                    roleCom.startIdleAnimi()
                     return
                 }
 
                 pos.add(add)
                 
                 // 到达终点判定
-                if (roleCom.isHorizon && pos.x > 0){
-                    roleCom.playIdle()
-                    roleCom.isIntarget = true
+                if (roleCom.ishorizonStatus && pos.x > 0){
+                    roleCom.startIdleAnimi()
+                    roleCom.isTargetArea = true
                     role.setRotationFromEuler(-40,0,0)
                     role.setPosition(0,0,0.2)
                     return
-                }else if (!roleCom.isHorizon && pos.z > 0){
-                    roleCom.playIdle()
-                    roleCom.isHorizon = true
+                }else if (!roleCom.ishorizonStatus && pos.z > 0){
+                    roleCom.startIdleAnimi()
+                    roleCom.ishorizonStatus = true
                     role.setRotationFromEuler(0,90,-30)
                     role.setPosition(-10,0,0)
                     return
                 }
                 if (role.getComponent(heroBussColorsComponent).stageAnimi === "sit") return
-                roleCom.playWalk()
+                roleCom.startWalkAnimi()
                 role.setPosition(pos)
             }else{
                 role.active = false

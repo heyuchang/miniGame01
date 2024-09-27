@@ -26,25 +26,25 @@ export class heroBussColorsComponent extends Component {
 
     stageAnimi: string = "" // sit, idle, run
 
-    isHorizon: boolean = false
+    ishorizonStatus: boolean = false
 
-    isIntarget: boolean = false
+    isTargetArea: boolean = false
 
     bussColorUpdate(){
         this.node.children[0].getComponent(MeshRenderer).setSharedMaterial(this.colorMaterials[this.color], 0)
     }
 
-    playWalk(){
+    startWalkAnimi(){
         if (this.stageAnimi === "walk") return
         this.stageAnimi = "walk"
         this.animation.play("Run")
     }
-    playSit(){
+    startSitAnimi(){
         this.stageAnimi = "sit"
         const names = ["SitLaughing","SitTalking"]
         this.animation.play(names[randomRangeInt(0,2)])
     }
-    playIdle(){
+    startIdleAnimi(){
         if (this.stageAnimi === "idle") return
         this.stageAnimi = "idle"
         const names = ["Idle","SadIdle", "HappyIdle", "HappyIdle1"]
@@ -52,13 +52,13 @@ export class heroBussColorsComponent extends Component {
     }
     sitfinish(){
         if (this.node.activeInHierarchy && this.stageAnimi === "sit"){
-            this.playSit()
+            this.startSitAnimi()
         }
     }
     idlefinish(){
 
         if (this.node.activeInHierarchy && this.stageAnimi === "idle"){
-            this.playIdle()
+            this.startIdleAnimi()
         }
     }
 }
