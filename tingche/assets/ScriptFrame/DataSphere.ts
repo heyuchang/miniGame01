@@ -8,7 +8,7 @@ export const ConfigKeys = {
 
 // 全局变量名
 export const DataKeys = {
-    status: "status", // 存放游戏状态，start,stop,pause
+    stageAnimi: "stageAnimi", // 存放游戏状态，start,stop,pause
 }
 
 export class DataSphere {

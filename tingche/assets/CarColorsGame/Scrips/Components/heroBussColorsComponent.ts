@@ -13,7 +13,7 @@ export class heroBussColorsComponent extends Component {
     }
     set color(value){
         this._color = value
-        this.changeColor()
+        this.bussColorUpdate()
     }
 
     @property({type: Enum(CarColors)})
@@ -24,40 +24,40 @@ export class heroBussColorsComponent extends Component {
     })
     colorMaterials: Array<Material> = []
 
-    status: string = "" // sit, idle, run
+    stageAnimi: string = "" // sit, idle, run
 
     isHorizon: boolean = false
 
     isIntarget: boolean = false
 
-    changeColor(){
+    bussColorUpdate(){
         this.node.children[0].getComponent(MeshRenderer).setSharedMaterial(this.colorMaterials[this.color], 0)
     }
 
     playWalk(){
-        if (this.status === "walk") return
-        this.status = "walk"
+        if (this.stageAnimi === "walk") return
+        this.stageAnimi = "walk"
         this.animation.play("Run")
     }
     playSit(){
-        this.status = "sit"
+        this.stageAnimi = "sit"
         const names = ["SitLaughing","SitTalking"]
         this.animation.play(names[randomRangeInt(0,2)])
     }
     playIdle(){
-        if (this.status === "idle") return
-        this.status = "idle"
+        if (this.stageAnimi === "idle") return
+        this.stageAnimi = "idle"
         const names = ["Idle","SadIdle", "HappyIdle", "HappyIdle1"]
         this.animation.play(names[randomRangeInt(0,4)])
     }
     sitfinish(){
-        if (this.node.activeInHierarchy && this.status === "sit"){
+        if (this.node.activeInHierarchy && this.stageAnimi === "sit"){
             this.playSit()
         }
     }
     idlefinish(){
 
-        if (this.node.activeInHierarchy && this.status === "idle"){
+        if (this.node.activeInHierarchy && this.stageAnimi === "idle"){
             this.playIdle()
         }
     }

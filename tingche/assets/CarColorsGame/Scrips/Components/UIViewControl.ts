@@ -10,10 +10,10 @@ export class UIViewControl extends Component {
     @property(AnimationClip)
     hideClip: AnimationClip = null
 
-    status: string = "hide" // hide, show
+    stageAnimi: string = "hide" // hide, show
 
     show(opts?:any){
-        this.status = "show"
+        this.stageAnimi = "show"
         this.node.active = true
         if (this.animation !== null){
             this.animation.stop()
@@ -22,7 +22,7 @@ export class UIViewControl extends Component {
     }
 
     hide(){
-        this.status = "hide"
+        this.stageAnimi = "hide"
         if (this.animation !== null){
             this.animation.stop()
             this.animation.once(Animation.EventType.FINISHED, ()=>{

@@ -14,7 +14,7 @@ export class bussColorsComponent extends Component {
     }
     set carColor(value){
         this._carColor = value
-        this.changeColor()
+        this.bussColorUpdate()
     }
     @property({type: Enum(CarColors)})
     private _carColor: CarColors = CarColors.Purple
@@ -26,7 +26,7 @@ export class bussColorsComponent extends Component {
 
     tweenCount = 0
     onLoad(){
-        this.changeColor()
+        this.bussColorUpdate()
         if (this.carType === CarTypes.Minivan){
             this.halfLen = 1.6
         }else if (this.carType === CarTypes.Sedan){
@@ -37,7 +37,7 @@ export class bussColorsComponent extends Component {
         this.isFull = false
     }
 
-    changeColor(){
+    bussColorUpdate(){
         this.node.getChildByName("Meshs").children.forEach(child=>{
             if (child.name === CarColors[this._carColor]){
                 child.active = true

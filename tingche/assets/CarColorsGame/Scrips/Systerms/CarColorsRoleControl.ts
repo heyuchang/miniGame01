@@ -230,7 +230,7 @@ export class CarColorsRoleControl extends Component {
     // 更新角色位置
     updateRolePos(dt: number){
         find("Scene/Roles").children.forEach((role, index)=>{
-            if (role.getComponent(heroBussColorsComponent).status === "sit") return
+            if (role.getComponent(heroBussColorsComponent).stageAnimi === "sit") return
 
             if (index < 18){
                 const roleCom = role.getComponent(heroBussColorsComponent)
@@ -279,7 +279,7 @@ export class CarColorsRoleControl extends Component {
                     role.setPosition(-10,0,0)
                     return
                 }
-                if (role.getComponent(heroBussColorsComponent).status === "sit") return
+                if (role.getComponent(heroBussColorsComponent).stageAnimi === "sit") return
                 roleCom.playWalk()
                 role.setPosition(pos)
             }else{
