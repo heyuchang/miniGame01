@@ -16,7 +16,7 @@ export class RevivePage extends UIViewControl {
         })
     }
     closeClick(){
-        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.FailPage)
+        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.FailPanel)
         CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RevivePage)
     }
 }

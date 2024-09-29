@@ -184,7 +184,7 @@ export class CarColorsRoleControl extends Component {
         // 匹配的车
         if (selectedCar !== null){
 
-            if (selectedCar.getComponent(bussColorsComponent).addRole(roleCom.node)){
+            if (selectedCar.getComponent(bussColorsComponent).grantRole(roleCom.node)){
                 selectedCar.setParent(find("Scene/Levels"), true)
             }
             this.addRoleToLine()

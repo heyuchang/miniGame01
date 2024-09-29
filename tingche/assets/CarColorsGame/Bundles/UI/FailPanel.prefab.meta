@@ -2,12 +2,12 @@
   "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "403ed200-c6b3-4e6a-bd7e-242a3ae5ba29",
+  "uuid": "a66efc45-41ba-45bc-b3a5-28b896807b3b",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "HomePage"
+    "syncNodeName": "FailPanel"
   }
 }

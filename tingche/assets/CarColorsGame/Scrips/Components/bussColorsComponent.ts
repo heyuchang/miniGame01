@@ -25,6 +25,48 @@ export class bussColorsComponent extends Component {
     isFull: boolean = false
 
     tweenCount = 0
+
+    exitCar(){
+        this.node.getChildByName("Seets").children.forEach(seat=>{
+            if (seat.children.length === 0) return
+            const roleCom = seat.children[0].getComponent(heroBussColorsComponent)
+            CarColorsEntryCreat.instance.roleSysterm.clearOne(roleCom)
+        })
+        CarColorsEntryCreat.instance.carSysterm.removeCar(this.node)
+        this.node.removeFromParent()
+        this.node.destroy()
+
+        // console.log("exitCar:", find("Scene/Levels").children.length, find("Scene/Levels").children[0].children.length, find("Scene/Roles").children.length)
+        // 判定胜利
+        if (CarColorsEntryCreat.instance.carSysterm.activeCar.size === 0){
+            if (find("Scene/Roles").children.length === 0){
+                CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.SuccessPage)
+                CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePanel)
+            }
+        }
+    }
+
+    // 车离开
+    carExitUpdate(target: Node){
+        tween(this.node).to(0.2, {
+            worldPosition: target.getWorldPosition()
+        })
+        .call(()=>{
+            const carforward = this.node.forward.clone()
+            tween(carforward).to(0.1, {x:-1, y:0, z:0}, {onUpdate:()=>{
+                this.node.forward = carforward
+            }}).start()
+        })
+        .delay(0.1)
+        .to(0.2, {
+            worldPosition: find("Scene/grounds/physicRoodTop/rightPoint").getWorldPosition()
+        })
+        .call(()=>{
+            this.exitCar()
+        })
+        .start()
+    }
+
     onLoad(){
         this.bussColorUpdate()
         if (this.carType === CarTypes.Minivan){
@@ -37,26 +79,7 @@ export class bussColorsComponent extends Component {
         this.isFull = false
     }
 
-    bussColorUpdate(){
-        this.node.getChildByName("Meshs").children.forEach(child=>{
-            if (child.name === CarColors[this._carColor]){
-                child.active = true
-                child.children[0].active = true
-            }else{
-                child.active = false
-                child.children[0].active = true
-            }
-        })
-
-        this.node.getChildByName("arrow").active = true
-
-        tween(this.node)
-        .to(0.2, {scale: new Vec3(1.4,1.4,1.4)})
-        .to(0.2, {scale: new Vec3(0.95,0.95,0.95)})
-        .start()
-    }
-
-    addRole(role: Node): boolean{
+    grantRole(role: Node): boolean{
         const carPoint = this.node.parent
         role.setParent(this.node.getChildByName("Seets").children[this.roleNum],true)
         role.getComponent(heroBussColorsComponent).startWalkAnimi()
@@ -75,7 +98,7 @@ export class bussColorsComponent extends Component {
                 }else {
                     carPoint.name = "empty"
                 }
-                this.carOutTween(carPoint)
+                this.carExitUpdate(carPoint)
             }
         })
         .start()
@@ -92,44 +115,23 @@ export class bussColorsComponent extends Component {
 
         return this.isFull
     }
-    carOut(){
-        this.node.getChildByName("Seets").children.forEach(seat=>{
-            if (seat.children.length === 0) return
-            const roleCom = seat.children[0].getComponent(heroBussColorsComponent)
-            CarColorsEntryCreat.instance.roleSysterm.clearOne(roleCom)
-        })
-        CarColorsEntryCreat.instance.carSysterm.removeCar(this.node)
-        this.node.removeFromParent()
-        this.node.destroy()
 
-        // console.log("carOut:", find("Scene/Levels").children.length, find("Scene/Levels").children[0].children.length, find("Scene/Roles").children.length)
-        // 判定胜利
-            if (CarColorsEntryCreat.instance.carSysterm.activeCar.size === 0){
-                if (find("Scene/Roles").children.length === 0){
-                    CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.SuccessPage)
-                    CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePage)
-                }
+    bussColorUpdate(){
+        this.node.getChildByName("Meshs").children.forEach(child=>{
+            if (child.name === CarColors[this._carColor]){
+                child.active = true
+                child.children[0].active = true
+            }else{
+                child.active = false
+                child.children[0].active = true
             }
-    }
-    
-    // 车离开
-    carOutTween(target: Node){
-        tween(this.node).to(0.2, {
-            worldPosition: target.getWorldPosition()
         })
-        .call(()=>{
-            const carforward = this.node.forward.clone()
-            tween(carforward).to(0.1, {x:-1, y:0, z:0}, {onUpdate:()=>{
-                this.node.forward = carforward
-            }}).start()
-        })
-        .delay(0.1)
-        .to(0.2, {
-            worldPosition: find("Scene/grounds/physicRoodTop/rightPoint").getWorldPosition()
-        })
-        .call(()=>{
-            this.carOut()
-        })
+
+        this.node.getChildByName("arrow").active = true
+
+        tween(this.node)
+        .to(0.2, {scale: new Vec3(1.4,1.4,1.4)})
+        .to(0.2, {scale: new Vec3(0.95,0.95,0.95)})
         .start()
     }
 }

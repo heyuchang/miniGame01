@@ -120,7 +120,7 @@ export class CarColorsSetControl extends Component {
             const ray = new geometry.Ray(pos.x, pos.y, pos.z, forward.x, forward.y, forward.z)
             // 前方没有障碍物
             if (!PhysicsSystem.instance.raycastClosest(ray, mask, maxDistance, queryTrigger)){
-                carBoxCom.outCarTween()
+                carBoxCom.outTweenCar()
             }
         }
     }

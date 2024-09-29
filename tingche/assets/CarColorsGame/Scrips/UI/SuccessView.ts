@@ -14,9 +14,9 @@ export class SuccessPage extends UIViewControl {
         DataSphere.instance.setConfigData(ConfigKeys.GameSaveData, gameSaveData)
     }
     homeClick(){
-        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.HomePage)
+        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.MainPanel)
         CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.SuccessPage)
-        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePage)
+        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePanel)
     }
     nextClick(){
         this.startGame()
@@ -45,13 +45,13 @@ export class SuccessPage extends UIViewControl {
                 CarColorsEntryCreat.instance.carSysterm.addCar(Level.children[i])
             }
             CarColorsEntryCreat.instance.roleSysterm.initLevel()
-            CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.GamePage)
+            CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.GamePanel)
             CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.SuccessPage)
         }).catch((err)=>{
             // console.log(err)
             CarColorsEntryCreat.instance.toastSysterm.showToast("关卡正在制作中")
-            CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.HomePage)
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePage)
+            CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.MainPanel)
+            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePanel)
             CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.SuccessPage)
         })
     }

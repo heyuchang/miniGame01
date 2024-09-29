@@ -20,8 +20,7 @@ export class BussComponent extends Component {
 
     isAnimateOut:boolean = false
 
-    outCarTween(){
-        console.log("outCarTween")
+    outTweenCar(){
         this.isAnimateOut = true
 
         const car = this.node.getChildByName("cars").children[0]

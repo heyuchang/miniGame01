@@ -3,14 +3,14 @@ import { CarColorsEntryCreat } from '../CarColorsEntryCreat';
 import { UINames } from '../CarColorsEntryEnum';
 import { UIViewControl } from '../Components/UIViewControl';
 import { InfrastructureDirector } from '../../../ScriptFrame/Frame/InfrastructureDirector';
-import { GamePage } from './GamePage';
+import { GamePanel } from './GamePanel';
 const { ccclass, property } = _decorator;
 
 @ccclass('VipPage')
 export class VipPage extends UIViewControl {
     useClick(){
         InfrastructureDirector.instance.showVideoAd(()=>{
-            const gamePage = CarColorsEntryCreat.instance.uiSysterm.UIScrpits.get(UINames[UINames.GamePage]) as GamePage
+            const gamePage = CarColorsEntryCreat.instance.uiSysterm.UIScrpits.get(UINames[UINames.GamePanel]) as GamePanel
             gamePage.isChooseHelicopterTarget = true
             gamePage.node.getChildByName("chooseTip").active = true
             CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.VipPage)

@@ -7,11 +7,11 @@ export const BundleNames = {
 }
 // Ui列表
 export enum UINames {
-    HomePage,
-    GamePage,
+    MainPanel,
+    GamePanel,
     SuccessPage,
     RevivePage,
-    FailPage,
+    FailPanel,
     RefreshPage,
     SortPage,
     VipPage,

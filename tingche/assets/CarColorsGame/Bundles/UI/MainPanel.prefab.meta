@@ -2,12 +2,12 @@
   "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "23d02ce1-9d19-4cae-be78-ee7624e22e26",
+  "uuid": "403ed200-c6b3-4e6a-bd7e-242a3ae5ba29",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "GamePage"
+    "syncNodeName": "MainPanel"
   }
 }

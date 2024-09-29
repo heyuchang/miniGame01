@@ -7,8 +7,8 @@ import { DataSphere, ConfigKeys } from '../../../ScriptFrame/DataSphere';
 import { InfrastructureDirector } from '../../../ScriptFrame/Frame/InfrastructureDirector';
 const { ccclass, property } = _decorator;
 
-@ccclass('GamePage')
-export class GamePage extends UIViewControl {
+@ccclass('GamePanel')
+export class GamePanel extends UIViewControl {
     isAnimateObstacle: boolean = false
 
     isAnimateHelicopter: boolean = false

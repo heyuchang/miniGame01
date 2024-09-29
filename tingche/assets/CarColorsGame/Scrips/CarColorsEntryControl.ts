@@ -50,7 +50,7 @@ export class CarColorsEntryControl extends Component {
         CarColorsEntryCreat.instance.uiSysterm = this.node.addComponent(CarColorsUIControl)
         await CarColorsEntryCreat.instance.uiSysterm.loadUIPrefabs()
         
-        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.HomePage)
+        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.MainPanel)
         find("UI/BundleLoading").active = false
     }
 
