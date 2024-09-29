@@ -5,19 +5,19 @@ import { UIViewControl } from '../Components/UIViewControl';
 import { InfrastructureDirector } from '../../../ScriptFrame/Frame/InfrastructureDirector';
 const { ccclass, property } = _decorator;
 
-@ccclass('RefreshPage')
-export class RefreshPage extends UIViewControl {
+@ccclass('RefreshPanel')
+export class RefreshPanel extends UIViewControl {
     useClick(){
         InfrastructureDirector.instance.showVideoAd(()=>{
             CarColorsEntryCreat.instance.carSysterm.refreshCar()
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RefreshPage)
+            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RefreshPanel)
             CarColorsEntryCreat.instance.roleSysterm.isGaming = true
         },()=>{
             CarColorsEntryCreat.instance.toastSysterm.showToast("视频播放未完成！")
         })
     }
     closeClick(){
-        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RefreshPage)
+        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RefreshPanel)
         CarColorsEntryCreat.instance.roleSysterm.isGaming = true
     }
 }

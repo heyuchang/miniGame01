@@ -2,12 +2,12 @@
   "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "cd536457-064b-4b7b-96f3-0b3659b811c4",
+  "uuid": "49a2367c-77ec-4d52-9716-3f8bee5f62e3",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "RevivePage"
+    "syncNodeName": "SortPanel"
   }
 }

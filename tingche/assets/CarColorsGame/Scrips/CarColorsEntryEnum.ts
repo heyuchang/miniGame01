@@ -9,12 +9,12 @@ export const BundleNames = {
 export enum UINames {
     MainPanel,
     GamePanel,
-    SuccessPage,
-    RevivePage,
+    CarSuccPanel,
+    RevivePanel,
     FailPanel,
-    RefreshPage,
-    SortPage,
-    VipPage,
+    RefreshPanel,
+    SortPanel,
+    HeroVipPanel,
 }
 export enum CarTypes {
     Sedan,

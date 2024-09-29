@@ -2,12 +2,12 @@
   "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "49a2367c-77ec-4d52-9716-3f8bee5f62e3",
+  "uuid": "da8e945b-7638-4244-8e5b-f107fa0fcf37",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "SortPage"
+    "syncNodeName": "HeroVipPanel"
   }
 }

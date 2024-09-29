@@ -2,12 +2,12 @@
   "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "da8e945b-7638-4244-8e5b-f107fa0fcf37",
+  "uuid": "cd536457-064b-4b7b-96f3-0b3659b811c4",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "VipPage"
+    "syncNodeName": "RevivePanel"
   }
 }

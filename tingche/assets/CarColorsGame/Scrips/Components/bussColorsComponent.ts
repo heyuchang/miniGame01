@@ -40,7 +40,7 @@ export class bussColorsComponent extends Component {
         // 判定胜利
         if (CarColorsEntryCreat.instance.carSysterm.activeCar.size === 0){
             if (find("Scene/Roles").children.length === 0){
-                CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.SuccessPage)
+                CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.CarSuccPanel)
                 CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePanel)
             }
         }

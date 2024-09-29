@@ -5,8 +5,8 @@ import { UINames } from '../CarColorsEntryEnum';
 import { DataSphere, ConfigKeys } from '../../../ScriptFrame/DataSphere';
 const { ccclass, property } = _decorator;
 
-@ccclass('SuccessPage')
-export class SuccessPage extends UIViewControl {
+@ccclass('CarSuccPanel')
+export class CarSuccPanel extends UIViewControl {
     show(opts?: any): void {
         super.show(opts)
         const gameSaveData: {level: number} = DataSphere.instance.getConfigData(ConfigKeys.GameSaveData)
@@ -15,7 +15,7 @@ export class SuccessPage extends UIViewControl {
     }
     homeClick(){
         CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.MainPanel)
-        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.SuccessPage)
+        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.CarSuccPanel)
         CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePanel)
     }
     nextClick(){
@@ -46,13 +46,13 @@ export class SuccessPage extends UIViewControl {
             }
             CarColorsEntryCreat.instance.roleSysterm.initLevel()
             CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.GamePanel)
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.SuccessPage)
+            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.CarSuccPanel)
         }).catch((err)=>{
             // console.log(err)
             CarColorsEntryCreat.instance.toastSysterm.showToast("关卡正在制作中")
             CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.MainPanel)
             CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePanel)
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.SuccessPage)
+            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.CarSuccPanel)
         })
     }
 }

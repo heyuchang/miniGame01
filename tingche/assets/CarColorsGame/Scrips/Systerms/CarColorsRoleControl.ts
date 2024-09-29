@@ -193,7 +193,7 @@ export class CarColorsRoleControl extends Component {
             // 游戏结束判定
             if (!isEmpty){
                 this.isGaming = false
-                CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.RevivePage)
+                CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.RevivePanel)
             }
             return
         }
