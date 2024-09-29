@@ -4,7 +4,7 @@ import { bussColorsComponent } from '../Components/bussColorsComponent';
 import { CarColorsEntryCreat } from '../CarColorsEntryCreat';
 import { CarColors, UINames } from '../CarColorsEntryEnum';
 import { DataSphere, ConfigKeys } from '../../../ScriptFrame/DataSphere';
-import { InfrastructureDirector } from '../../../ScriptFrame/Frame/InfrastructureDirector';
+import { InfrastManager } from '../../../ScriptFrame/Frame/InfrastManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('GamePanel')
@@ -47,7 +47,7 @@ export class GamePanel extends UIViewControl {
     }
 
     shareUnlock(){
-        InfrastructureDirector.instance.shareGame(()=>{
+        InfrastManager.instance.shareGame(()=>{
             const points = find("Scene/Parkings").children
             points[4].name = "empty"
             points[4].children[0].children[0].active = true
@@ -56,7 +56,7 @@ export class GamePanel extends UIViewControl {
     }
 
     videoUnlock1(){
-        InfrastructureDirector.instance.showVideoAd(()=>{
+        InfrastManager.instance.showVideoAd(()=>{
             const points = find("Scene/Parkings").children
             points[5].name = "empty"
             points[5].children[0].children[0].active = true
@@ -66,7 +66,7 @@ export class GamePanel extends UIViewControl {
         })
     }
     videoUnlock2(){
-        InfrastructureDirector.instance.showVideoAd(()=>{
+        InfrastManager.instance.showVideoAd(()=>{
             const points = find("Scene/Parkings").children
             points[6].name = "empty"
             points[6].children[0].children[0].active = true

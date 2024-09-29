@@ -2,13 +2,13 @@ import { _decorator, Component, Node } from 'cc';
 import { CarColorsEntryCreat } from '../CarColorsEntryCreat';
 import { UINames } from '../CarColorsEntryEnum';
 import { UIViewControl } from '../Components/UIViewControl';
-import { InfrastructureDirector } from '../../../ScriptFrame/Frame/InfrastructureDirector';
+import { InfrastManager } from '../../../ScriptFrame/Frame/InfrastManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('SortPanel')
 export class SortPanel extends UIViewControl {
     useClick(){
-        InfrastructureDirector.instance.showVideoAd(()=>{
+        InfrastManager.instance.showVideoAd(()=>{
             CarColorsEntryCreat.instance.roleSysterm.refreshRoleLine()
             CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.SortPanel)
             CarColorsEntryCreat.instance.roleSysterm.isGaming = true

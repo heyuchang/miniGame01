@@ -3,21 +3,21 @@ import { DataSphere } from '../DataSphere';
 import { AudioClipNames } from '../GlobalTypes';
 const { ccclass, property } = _decorator;
 
-@ccclass('AudioSynth')
-export class AudioSynth {
+@ccclass('AudioCreator')
+export class AudioCreator {
     private audioSource: AudioSource = null;
 
     private soundOn: boolean = true
 
     clips: {[props:string]:AudioClip} = {}
 
-    private static _instance: AudioSynth;
+    private static _instance: AudioCreator;
     public static get instance () {
         if (this._instance) {
             return this._instance;
         }
 
-        this._instance = new AudioSynth();
+        this._instance = new AudioCreator();
         return this._instance;
     }
 

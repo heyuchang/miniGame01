@@ -2,13 +2,13 @@ import { _decorator, Component, Node } from 'cc';
 import { UIViewControl } from '../Components/UIViewControl';
 import { CarColorsEntryCreat } from '../CarColorsEntryCreat';
 import { UINames } from '../CarColorsEntryEnum';
-import { InfrastructureDirector } from '../../../ScriptFrame/Frame/InfrastructureDirector';
+import { InfrastManager } from '../../../ScriptFrame/Frame/InfrastManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('RevivePanel')
 export class RevivePanel extends UIViewControl {
     reviveClick(){
-        InfrastructureDirector.instance.showVideoAd(()=>{
+        InfrastManager.instance.showVideoAd(()=>{
             CarColorsEntryCreat.instance.roleSysterm.refreshRoleLine()
             CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RevivePanel)
         },()=>{

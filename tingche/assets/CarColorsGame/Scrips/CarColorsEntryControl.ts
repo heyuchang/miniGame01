@@ -7,7 +7,7 @@ import { UINames } from './CarColorsEntryEnum';
 import { CarColorsRoleControl } from './Systerms/CarColorsRoleControl';
 import { DataSphere, ConfigKeys } from '../../ScriptFrame/DataSphere';
 import { CarColorsSetControl } from './Systerms/CarColorsSetControl';
-import { InfrastructureDirector } from '../../ScriptFrame/Frame/InfrastructureDirector';
+import { InfrastManager } from '../../ScriptFrame/Frame/InfrastManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('CarColorsEntryControl')
@@ -22,9 +22,9 @@ export class CarColorsEntryControl extends Component {
     bookId: string = ""
 
     async start() {
-        InfrastructureDirector.adsInsId = this.insADid
-        InfrastructureDirector.adsVideoId = this.rewardADid
-        InfrastructureDirector.adsBannerId = this.bannerADid
+        InfrastManager.adsInsId = this.insADid
+        InfrastManager.adsVideoId = this.rewardADid
+        InfrastManager.adsBannerId = this.bannerADid
         if (sys.platform === sys.Platform.WECHAT_GAME){
             wx.showShareMenu({
                 withShareTicket: true,
