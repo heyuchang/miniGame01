@@ -9,16 +9,16 @@ const { ccclass, property } = _decorator;
 export class RefreshPanel extends UIViewControl {
     useClick(){
         InfrastManager.instance.showVideoAd(()=>{
-            CarColorsEntryCreat.instance.carSysterm.refreshCar()
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RefreshPanel)
-            CarColorsEntryCreat.instance.roleSysterm.isGaming = true
+            CarColorsEntryCreat.instance.bussCenter.refreshCar()
+            CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.RefreshPanel)
+            CarColorsEntryCreat.instance.roleUiCenter.isGaming = true
         },()=>{
-            CarColorsEntryCreat.instance.toastSysterm.showToast("视频播放未完成！")
+            CarColorsEntryCreat.instance.messageTpisSystem.showToast("视频播放未完成！")
         })
     }
     closeClick(){
-        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RefreshPanel)
-        CarColorsEntryCreat.instance.roleSysterm.isGaming = true
+        CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.RefreshPanel)
+        CarColorsEntryCreat.instance.roleUiCenter.isGaming = true
     }
 }
 

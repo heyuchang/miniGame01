@@ -10,16 +10,16 @@ const { ccclass, property } = _decorator;
 export class HeroVipPanel extends UIViewControl {
     useClick(){
         InfrastManager.instance.showVideoAd(()=>{
-            const gamePage = CarColorsEntryCreat.instance.uiSysterm.UIScrpits.get(UINames[UINames.GamePanel]) as GamePanel
+            const gamePage = CarColorsEntryCreat.instance.carUiCenter.UIScrpits.get(UINames[UINames.GamePanel]) as GamePanel
             gamePage.isChooseHelicopterTarget = true
             gamePage.node.getChildByName("chooseTip").active = true
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.HeroVipPanel)
+            CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.HeroVipPanel)
         },()=>{
-            CarColorsEntryCreat.instance.toastSysterm.showToast("视频播放未完成！")
+            CarColorsEntryCreat.instance.messageTpisSystem.showToast("视频播放未完成！")
         })
     }
     closeClick(){
-        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.HeroVipPanel)
-        CarColorsEntryCreat.instance.roleSysterm.isGaming = true
+        CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.HeroVipPanel)
+        CarColorsEntryCreat.instance.roleUiCenter.isGaming = true
     }
 }

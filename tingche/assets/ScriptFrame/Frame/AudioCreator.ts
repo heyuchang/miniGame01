@@ -1,5 +1,5 @@
 import { _decorator, AudioClip, AudioSource, assert } from 'cc';
-import { DataSphere } from '../DataSphere';
+import { BussGameDataSave } from '../BussGameDataSave';
 import { AudioClipNames } from '../GlobalTypes';
 const { ccclass, property } = _decorator;
 
@@ -32,7 +32,7 @@ export class AudioCreator {
     }
 
     getSoundConfig(){
-        this.soundOn = DataSphere.instance.getConfigData("audioconfig")
+        this.soundOn = BussGameDataSave.instance.getConfigData("audioconfig")
         if (this.soundOn === null){
             this.soundOn = true
         }
@@ -46,7 +46,7 @@ export class AudioCreator {
         }else {
             this.pause()
         }
-        DataSphere.instance.setConfigData("audioconfig", this.soundOn)
+        BussGameDataSave.instance.setConfigData("audioconfig", this.soundOn)
     }
 
     play () {

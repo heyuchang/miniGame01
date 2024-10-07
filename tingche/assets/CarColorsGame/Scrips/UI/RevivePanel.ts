@@ -9,15 +9,15 @@ const { ccclass, property } = _decorator;
 export class RevivePanel extends UIViewControl {
     reviveClick(){
         InfrastManager.instance.showVideoAd(()=>{
-            CarColorsEntryCreat.instance.roleSysterm.refreshRoleLine()
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RevivePanel)
+            CarColorsEntryCreat.instance.roleUiCenter.refreshRoleLine()
+            CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.RevivePanel)
         },()=>{
-            CarColorsEntryCreat.instance.toastSysterm.showToast("视频播放未完成！")
+            CarColorsEntryCreat.instance.messageTpisSystem.showToast("视频播放未完成！")
         })
     }
     closeClick(){
-        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.FailPanel)
-        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.RevivePanel)
+        CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.FailPanel)
+        CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.RevivePanel)
     }
 }
 

@@ -11,7 +11,7 @@ export class CarColorsUIControl extends Component {
     // 提前实例化UI预制体
     async loadUIPrefabs(){
         const uiNames = Object.keys(UINames).filter(item => isNaN(Number(item)))
-        const prefabList: Array<Prefab> = await Promise.all(CarColorsEntryCreat.instance.bundleSysterm.loadUIPrefab())
+        const prefabList: Array<Prefab> = await Promise.all(CarColorsEntryCreat.instance.bundleCenter.loadUIPrefab())
         prefabList.forEach((prefab, index)=>{
             const ui = instantiate(prefab)
             const uiScript = ui.getComponent(UIViewControl)

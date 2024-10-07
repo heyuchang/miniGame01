@@ -1,5 +1,5 @@
 import { game, native, sys } from "cc";
-import { DataSphere } from "../DataSphere";
+import { BussGameDataSave } from "../BussGameDataSave";
 import { EDITOR, PREVIEW } from "cc/env";
 import { CarColorsEntryCreat } from "../../CarColorsGame/Scrips/CarColorsEntryCreat";
 
@@ -105,7 +105,7 @@ export class InfrastManager {
     }
 
     getVibrate(){
-        this.isVibrate = DataSphere.instance.getConfigData("vibrate")
+        this.isVibrate = BussGameDataSave.instance.getConfigData("vibrate")
         if (this.isVibrate === null){
             this.isVibrate = true
         }
@@ -114,7 +114,7 @@ export class InfrastManager {
 
     setVibrate(isVibrate) {
         this.isVibrate = isVibrate
-        DataSphere.instance.setConfigData("vibrate", this.isVibrate)
+        BussGameDataSave.instance.setConfigData("vibrate", this.isVibrate)
     }
 
     startVibrate(time: number = 100) {
@@ -380,7 +380,7 @@ export class InfrastManager {
             // fcallback && fcallback()
             // game.pause()
             callback&&callback()
-            CarColorsEntryCreat.instance.toastSysterm.showToast("分享暂不可用，已免费解锁")
+            CarColorsEntryCreat.instance.messageTpisSystem.showToast("分享暂不可用，已免费解锁")
             return;
         };
         
@@ -388,7 +388,7 @@ export class InfrastManager {
         if (sys.platform === sys.Platform.WECHAT_GAME){
             const nowTime = new Date().getTime()
             wx.shareAppMessage()
-            CarColorsEntryCreat.instance.bundleSysterm.scheduleOnce(()=>{
+            CarColorsEntryCreat.instance.bundleCenter.scheduleOnce(()=>{
                 if (new Date().getTime() - nowTime < 3000){
                     fcallback && fcallback()
                 }else {

@@ -2,7 +2,7 @@ import { _decorator, Component, find, instantiate, Node } from 'cc';
 import { UIViewControl } from '../Components/UIViewControl';
 import { CarColorsEntryCreat } from '../CarColorsEntryCreat';
 import { UINames } from '../CarColorsEntryEnum';
-import { DataSphere, ConfigKeys } from '../../../ScriptFrame/DataSphere';
+import { BussGameDataSave, ConfigKeys } from '../../../ScriptFrame/BussGameDataSave';
 const { ccclass, property } = _decorator;
 
 @ccclass('MainPanel')
@@ -29,23 +29,23 @@ export class MainPanel extends UIViewControl {
         })
         find("Scene/Levels").destroyAllChildren()
         find("Scene/Levels").removeAllChildren()
-        CarColorsEntryCreat.instance.roleSysterm.clearAll()
-        CarColorsEntryCreat.instance.carSysterm.clearAll()
-        CarColorsEntryCreat.instance.bundleSysterm.loadLevels(DataSphere.instance.getConfigData(ConfigKeys.GameSaveData).level).then((level)=>{
+        CarColorsEntryCreat.instance.roleUiCenter.clearAll()
+        CarColorsEntryCreat.instance.bussCenter.clearAll()
+        CarColorsEntryCreat.instance.bundleCenter.loadLevels(BussGameDataSave.instance.getConfigData(ConfigKeys.GameSaveCarData).level).then((level)=>{
             console.log("instantiate(level)")
             const Level = instantiate(level)
             find("Scene/Levels").addChild(Level)
             for(let i = 0; i < Level.children.length;i++){
-                CarColorsEntryCreat.instance.carSysterm.addCar(Level.children[i])
+                CarColorsEntryCreat.instance.bussCenter.addCar(Level.children[i])
             }
-            CarColorsEntryCreat.instance.roleSysterm.initLevel()
-            CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.GamePanel)
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.MainPanel)
+            CarColorsEntryCreat.instance.roleUiCenter.initLevel()
+            CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.GamePanel)
+            CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.MainPanel)
         }).catch((err)=>{
             console.log(err)
-            CarColorsEntryCreat.instance.toastSysterm.showToast("关卡正在制作中")
+            CarColorsEntryCreat.instance.messageTpisSystem.showToast("关卡正在制作中")
             this.startBtn.active = true
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePanel)
+            CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.GamePanel)
         })
     }
 }

@@ -9,16 +9,16 @@ const { ccclass, property } = _decorator;
 export class SortPanel extends UIViewControl {
     useClick(){
         InfrastManager.instance.showVideoAd(()=>{
-            CarColorsEntryCreat.instance.roleSysterm.refreshRoleLine()
-            CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.SortPanel)
-            CarColorsEntryCreat.instance.roleSysterm.isGaming = true
+            CarColorsEntryCreat.instance.roleUiCenter.refreshRoleLine()
+            CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.SortPanel)
+            CarColorsEntryCreat.instance.roleUiCenter.isGaming = true
         },()=>{
-            CarColorsEntryCreat.instance.toastSysterm.showToast("视频播放未完成！")
+            CarColorsEntryCreat.instance.messageTpisSystem.showToast("视频播放未完成！")
         })
     }
     closeClick(){
-        CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.SortPanel)
-        CarColorsEntryCreat.instance.roleSysterm.isGaming = true
+        CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.SortPanel)
+        CarColorsEntryCreat.instance.roleUiCenter.isGaming = true
     }
 }
 

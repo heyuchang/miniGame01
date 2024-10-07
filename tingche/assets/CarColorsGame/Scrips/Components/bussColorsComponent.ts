@@ -30,18 +30,18 @@ export class bussColorsComponent extends Component {
         this.node.getChildByName("Seets").children.forEach(seat=>{
             if (seat.children.length === 0) return
             const roleCom = seat.children[0].getComponent(heroBussColorsComponent)
-            CarColorsEntryCreat.instance.roleSysterm.clearOne(roleCom)
+            CarColorsEntryCreat.instance.roleUiCenter.clearOne(roleCom)
         })
-        CarColorsEntryCreat.instance.carSysterm.removeCar(this.node)
+        CarColorsEntryCreat.instance.bussCenter.removeCar(this.node)
         this.node.removeFromParent()
         this.node.destroy()
 
         // console.log("exitCar:", find("Scene/Levels").children.length, find("Scene/Levels").children[0].children.length, find("Scene/Roles").children.length)
         // 判定胜利
-        if (CarColorsEntryCreat.instance.carSysterm.activeCar.size === 0){
+        if (CarColorsEntryCreat.instance.bussCenter.activeCar.size === 0){
             if (find("Scene/Roles").children.length === 0){
-                CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.CarSuccPanel)
-                CarColorsEntryCreat.instance.uiSysterm.hideUI(UINames.GamePanel)
+                CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.CarSuccPanel)
+                CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.GamePanel)
             }
         }
     }

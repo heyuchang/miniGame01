@@ -5,7 +5,7 @@ import { CarColorsBundleInfo } from './Systerms/CarColorsBundleInfo';
 import { CarColorsUIControl } from './Systerms/CarColorsUIControl';
 import { UINames } from './CarColorsEntryEnum';
 import { CarColorsRoleControl } from './Systerms/CarColorsRoleControl';
-import { DataSphere, ConfigKeys } from '../../ScriptFrame/DataSphere';
+import { BussGameDataSave, ConfigKeys } from '../../ScriptFrame/BussGameDataSave';
 import { CarColorsSetControl } from './Systerms/CarColorsSetControl';
 import { InfrastManager } from '../../ScriptFrame/Frame/InfrastManager';
 const { ccclass, property } = _decorator;
@@ -33,35 +33,35 @@ export class CarColorsEntryControl extends Component {
         }
         this.initData()
         // 挂载toast弹窗
-        CarColorsEntryCreat.instance.toastSysterm = find("UI/ToastSysterm").getComponent(ToastSysterm)
+        CarColorsEntryCreat.instance.messageTpisSystem = find("UI/ToastSysterm").getComponent(ToastSysterm)
 
         // 挂载资源包管理系统
-        CarColorsEntryCreat.instance.bundleSysterm = this.node.addComponent(CarColorsBundleInfo)
-        await CarColorsEntryCreat.instance.bundleSysterm.loadBundles()
+        CarColorsEntryCreat.instance.bundleCenter = this.node.addComponent(CarColorsBundleInfo)
+        await CarColorsEntryCreat.instance.bundleCenter.loadBundles()
 
         // 人物管理系统
-        CarColorsEntryCreat.instance.roleSysterm = this.node.addComponent(CarColorsRoleControl)
-        await CarColorsEntryCreat.instance.roleSysterm.loadRolePrefabs()
+        CarColorsEntryCreat.instance.roleUiCenter = this.node.addComponent(CarColorsRoleControl)
+        await CarColorsEntryCreat.instance.roleUiCenter.loadRolePrefabs()
 
         // 汽车管理系统
-        CarColorsEntryCreat.instance.carSysterm = this.node.addComponent(CarColorsSetControl)
+        CarColorsEntryCreat.instance.bussCenter = this.node.addComponent(CarColorsSetControl)
         
         // 挂载UI系统
-        CarColorsEntryCreat.instance.uiSysterm = this.node.addComponent(CarColorsUIControl)
-        await CarColorsEntryCreat.instance.uiSysterm.loadUIPrefabs()
+        CarColorsEntryCreat.instance.carUiCenter = this.node.addComponent(CarColorsUIControl)
+        await CarColorsEntryCreat.instance.carUiCenter.loadUIPrefabs()
         
-        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.MainPanel)
+        CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.MainPanel)
         find("UI/BundleLoading").active = false
     }
 
     initData(){
-        let  gameSaveData: {level: number} = DataSphere.instance.getConfigData(ConfigKeys.GameSaveData)
+        let  gameSaveData: {level: number} = BussGameDataSave.instance.getConfigData(ConfigKeys.GameSaveCarData)
         if (gameSaveData === null){
             gameSaveData = {
                 level: 1
             }
         }
-        DataSphere.instance.setConfigData(ConfigKeys.GameSaveData, gameSaveData)
+        BussGameDataSave.instance.setConfigData(ConfigKeys.GameSaveCarData, gameSaveData)
     }
 }
 

@@ -3,7 +3,7 @@ import { UIViewControl } from '../Components/UIViewControl';
 import { bussColorsComponent } from '../Components/bussColorsComponent';
 import { CarColorsEntryCreat } from '../CarColorsEntryCreat';
 import { CarColors, UINames } from '../CarColorsEntryEnum';
-import { DataSphere, ConfigKeys } from '../../../ScriptFrame/DataSphere';
+import { BussGameDataSave, ConfigKeys } from '../../../ScriptFrame/BussGameDataSave';
 import { InfrastManager } from '../../../ScriptFrame/Frame/InfrastManager';
 const { ccclass, property } = _decorator;
 
@@ -18,7 +18,7 @@ export class GamePanel extends UIViewControl {
         super.show(opts)
         this.node.on(Input.EventType.TOUCH_START, this.touchStart, this)
         this.isAnimateObstacle = false
-        this.node.getChildByName("leveltext").getComponent(Label).string = `第${DataSphere.instance.getConfigData(ConfigKeys.GameSaveData).level}关`
+        this.node.getChildByName("leveltext").getComponent(Label).string = `第${BussGameDataSave.instance.getConfigData(ConfigKeys.GameSaveCarData).level}关`
     }
 
     hide(): void {
@@ -27,23 +27,23 @@ export class GamePanel extends UIViewControl {
     }
 
     refreshClick(){
-        if (!CarColorsEntryCreat.instance.roleSysterm.isGaming) return
-        CarColorsEntryCreat.instance.roleSysterm.isGaming = false
-        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.RefreshPanel)
+        if (!CarColorsEntryCreat.instance.roleUiCenter.isGaming) return
+        CarColorsEntryCreat.instance.roleUiCenter.isGaming = false
+        CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.RefreshPanel)
     }
     sortClick(){
-        if (!CarColorsEntryCreat.instance.roleSysterm.isGaming) return
-        CarColorsEntryCreat.instance.roleSysterm.isGaming = false
-        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.SortPanel)
+        if (!CarColorsEntryCreat.instance.roleUiCenter.isGaming) return
+        CarColorsEntryCreat.instance.roleUiCenter.isGaming = false
+        CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.SortPanel)
     }
     vipClick(){
-        if (!CarColorsEntryCreat.instance.roleSysterm.isGaming) return
+        if (!CarColorsEntryCreat.instance.roleUiCenter.isGaming) return
         if (find("Scene/Parkings").children[7].name !== "lock") {
-            CarColorsEntryCreat.instance.toastSysterm.showToast("VIP车位占用")
+            CarColorsEntryCreat.instance.messageTpisSystem.showToast("VIP车位占用")
             return
         }
-        CarColorsEntryCreat.instance.roleSysterm.isGaming = false
-        CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.HeroVipPanel)
+        CarColorsEntryCreat.instance.roleUiCenter.isGaming = false
+        CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.HeroVipPanel)
     }
 
     shareUnlock(){
@@ -62,7 +62,7 @@ export class GamePanel extends UIViewControl {
             points[5].children[0].children[0].active = true
             points[5].children[0].children[1].active = false
         },()=>{
-            CarColorsEntryCreat.instance.toastSysterm.showToast("视频播放未完成！")
+            CarColorsEntryCreat.instance.messageTpisSystem.showToast("视频播放未完成！")
         })
     }
     videoUnlock2(){
@@ -72,7 +72,7 @@ export class GamePanel extends UIViewControl {
             points[6].children[0].children[0].active = true
             points[6].children[0].children[1].active = false
         },()=>{
-            CarColorsEntryCreat.instance.toastSysterm.showToast("视频播放未完成！")
+            CarColorsEntryCreat.instance.messageTpisSystem.showToast("视频播放未完成！")
         })
     }
 
@@ -153,7 +153,7 @@ export class GamePanel extends UIViewControl {
                     const point = this.getEmptyParkPoint()
                     if (point === null) {
                         // console.log("没有车位了")
-                        CarColorsEntryCreat.instance.toastSysterm.showToast("没有车位了")
+                        CarColorsEntryCreat.instance.messageTpisSystem.showToast("没有车位了")
                         return
                     }
 
@@ -199,7 +199,7 @@ export class GamePanel extends UIViewControl {
                     point.name = "inuse"
                     tweenCar.call(()=>{
                         car.setParent(point, true)
-                        // CarColorsEntryCreat.instance.roleSysterm.moveToCar()
+                        // CarColorsEntryCreat.instance.roleUiCenter.moveToCar()
                         car.getChildByName("arrow").active = false
                         car.getChildByPath(`Meshs/${CarColors[car.getComponent(bussColorsComponent).carColor]}/top`).active = false
                         car.setScale(1.15,1.15,1.15)
@@ -238,7 +238,7 @@ export class GamePanel extends UIViewControl {
         .call(()=>{
             car.forward = new Vec3(-1.2,0,2)
             car.setParent(parkPoint, true)
-            CarColorsEntryCreat.instance.roleSysterm.isGaming = true
+            CarColorsEntryCreat.instance.roleUiCenter.isGaming = true
             this.isAnimateHelicopter = false
             car.getChildByName("arrow").active = false
             car.getChildByPath(`Meshs/${CarColors[car.getComponent(bussColorsComponent).carColor]}/top`).active = false

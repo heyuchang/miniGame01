@@ -16,7 +16,7 @@ export class CarColorsRoleControl extends Component {
     async loadRolePrefabs(){
         
         const colors = Object.keys(CarColors).filter(item => isNaN(Number(item)))
-        const prefabList: Array<Prefab> = await Promise.all(CarColorsEntryCreat.instance.bundleSysterm.loadRolePrefab())
+        const prefabList: Array<Prefab> = await Promise.all(CarColorsEntryCreat.instance.bundleCenter.loadRolePrefab())
         prefabList.forEach((prefab, index)=>{
             colors.forEach(color=>{
                 const pool = new NodePool()
@@ -71,7 +71,7 @@ export class CarColorsRoleControl extends Component {
             }
             const roleCom = roles[i].getComponent(heroBussColorsComponent)
             if (roleCom.color !== colors[i]){
-                const colorIndex = CarColorsEntryCreat.instance.carSysterm.carSeats.lastIndexOf(colors[i])
+                const colorIndex = CarColorsEntryCreat.instance.bussCenter.carSeats.lastIndexOf(colors[i])
 
                 // 存量未找到，从队列中找
                 if (colorIndex === -1){
@@ -82,7 +82,7 @@ export class CarColorsRoleControl extends Component {
                         }
                     }
                 }else{
-                    CarColorsEntryCreat.instance.carSysterm.carSeats[colorIndex] = roleCom.color
+                    CarColorsEntryCreat.instance.bussCenter.carSeats[colorIndex] = roleCom.color
                 }
                 roleCom.color = colors[i]
             }
@@ -95,11 +95,11 @@ export class CarColorsRoleControl extends Component {
     addRoleToLine(){
 
         const rolesNode = find("Scene/Roles")
-        for(let i = CarColorsEntryCreat.instance.carSysterm.carSeats.length; i--;){
+        for(let i = CarColorsEntryCreat.instance.bussCenter.carSeats.length; i--;){
             if (rolesNode.children.length > 30){
                 break
             }
-            const color = CarColorsEntryCreat.instance.carSysterm.carSeats.pop()
+            const color = CarColorsEntryCreat.instance.bussCenter.carSeats.pop()
             const role = this.getRoleFromPool(color)
             role.getComponent(heroBussColorsComponent).startIdleAnimi()
             role.getComponent(heroBussColorsComponent).ishorizonStatus = false
@@ -193,7 +193,7 @@ export class CarColorsRoleControl extends Component {
             // 游戏结束判定
             if (!isEmpty){
                 this.isGaming = false
-                CarColorsEntryCreat.instance.uiSysterm.showUI(UINames.RevivePanel)
+                CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.RevivePanel)
             }
             return
         }

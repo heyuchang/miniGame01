@@ -10,7 +10,7 @@ const { ccclass, property } = _decorator;
 export class CarColorsEntryCreat extends Component {
     private static _instance: CarColorsEntryCreat;
     public static get instance () {
-        if (this._instance) {
+    if (this._instance) {
             return this._instance;
         }
 
@@ -19,11 +19,11 @@ export class CarColorsEntryCreat extends Component {
     }
 
 
-    public toastSysterm: ToastSysterm = null
-    public bundleSysterm: CarColorsBundleInfo = null
-    public uiSysterm: CarColorsUIControl = null
-    public roleSysterm: CarColorsRoleControl = null
-    public carSysterm: CarColorsSetControl = null
+    public messageTpisSystem: ToastSysterm = null
+    public bundleCenter: CarColorsBundleInfo = null
+    public carUiCenter: CarColorsUIControl = null
+    public roleUiCenter: CarColorsRoleControl = null
+    public bussCenter: CarColorsSetControl = null
     
 }
 

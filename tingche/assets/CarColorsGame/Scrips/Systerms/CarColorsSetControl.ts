@@ -126,7 +126,7 @@ export class CarColorsSetControl extends Component {
     }
 
     protected lateUpdate(dt: number): void {
-        if (!CarColorsEntryCreat.instance.roleSysterm.isGaming) return
+        if (!CarColorsEntryCreat.instance.roleUiCenter.isGaming) return
         this.checkCarBox()
     }
 }

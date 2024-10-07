@@ -1,24 +1,25 @@
 
 import { native, sys } from "cc";
 
-export const ConfigKeys = {
-    GameSaveData: "CarGameSaveData", // 游戏存档
-}
-
-
 // 全局变量名
 export const DataKeys = {
     stageAnimi: "stageAnimi", // 存放游戏状态，start,stop,pause
 }
 
-export class DataSphere {
-    private static _instance: DataSphere;
+
+export const ConfigKeys = {
+    GameSaveCarData: "CarGameSaveData", // 游戏存档
+}
+
+
+export class BussGameDataSave {
+    private static _instance: BussGameDataSave;
     static get instance() {
         if (this._instance) {
             return this._instance;
         }
 
-        this._instance = new DataSphere();
+        this._instance = new BussGameDataSave();
         this._instance.init()
         return this._instance;
     }
