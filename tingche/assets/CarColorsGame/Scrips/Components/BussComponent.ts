@@ -8,6 +8,11 @@ export class BussComponent extends Component {
     label3D: Label3D = null
 
     @property(CCInteger)
+    private _num: number = 8
+
+    isAnimateOut:boolean = false
+
+    @property(CCInteger)
     get num(){
         return this._num
     }
@@ -15,12 +20,9 @@ export class BussComponent extends Component {
         this._num = value
         this.label3D.string = `${value}`
     }
-    @property(CCInteger)
-    private _num: number = 8
 
-    isAnimateOut:boolean = false
 
-    outTweenCar(){
+    tweenOutCar(){
         this.isAnimateOut = true
 
         const car = this.node.getChildByName("cars").children[0]

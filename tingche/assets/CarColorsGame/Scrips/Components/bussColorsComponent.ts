@@ -26,28 +26,21 @@ export class bussColorsComponent extends Component {
 
     tweenCount = 0
 
-    exitCar(){
-        this.node.getChildByName("Seets").children.forEach(seat=>{
-            if (seat.children.length === 0) return
-            const roleCom = seat.children[0].getComponent(heroBussColorsComponent)
-            CarColorsEntryCreat.instance.roleUiCenter.clearOne(roleCom)
-        })
-        CarColorsEntryCreat.instance.bussCenter.removeCar(this.node)
-        this.node.removeFromParent()
-        this.node.destroy()
-
-        // console.log("exitCar:", find("Scene/Levels").children.length, find("Scene/Levels").children[0].children.length, find("Scene/Roles").children.length)
-        // 判定胜利
-        if (CarColorsEntryCreat.instance.bussCenter.activeCar.size === 0){
-            if (find("Scene/Roles").children.length === 0){
-                CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.CarSuccPanel)
-                CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.GamePanel)
-            }
+    onLoad(){
+        this.bussColorUpdate()
+        if (this.carType === CarTypes.Minivan){
+            this.halfLen = 1.6
+        }else if (this.carType === CarTypes.Sedan){
+            this.halfLen = 1.4
         }
+        
+        this.roleNum = 0
+        this.isFull = false
     }
 
+
     // 车离开
-    carExitUpdate(target: Node){
+    carExitUpdateUi(target: Node){
         tween(this.node).to(0.2, {
             worldPosition: target.getWorldPosition()
         })
@@ -62,58 +55,29 @@ export class bussColorsComponent extends Component {
             worldPosition: find("Scene/grounds/physicRoodTop/rightPoint").getWorldPosition()
         })
         .call(()=>{
-            this.exitCar()
+            this.exitCarUi()
         })
         .start()
     }
 
-    onLoad(){
-        this.bussColorUpdate()
-        if (this.carType === CarTypes.Minivan){
-            this.halfLen = 1.6
-        }else if (this.carType === CarTypes.Sedan){
-            this.halfLen = 1.4
-        }
-        
-        this.roleNum = 0
-        this.isFull = false
-    }
+    exitCarUi(){
+        this.node.getChildByName("Seets").children.forEach(seat=>{
+            if (seat.children.length === 0) return
+            const roleCom = seat.children[0].getComponent(heroBussColorsComponent)
+            CarColorsEntryCreat.instance.roleUiCenter.clearOne(roleCom)
+        })
+        CarColorsEntryCreat.instance.bussCenter.removeCar(this.node)
+        this.node.removeFromParent()
+        this.node.destroy()
 
-    grantRole(role: Node): boolean{
-        const carPoint = this.node.parent
-        role.setParent(this.node.getChildByName("Seets").children[this.roleNum],true)
-        role.getComponent(heroBussColorsComponent).startWalkAnimi()
-        tween(role).to(0.2,{
-            position: new Vec3(0,0,-0.1)
-        }).call(()=>{
-            this.tweenCount -= 1
-            role.setScale(0.9,0.9,0.9)
-            role.setRotationFromEuler(0,0,0)
-            role.getComponent(heroBussColorsComponent).startSitAnimi()
-            if (this.tweenCount <= 0 && this.isFull){
-                if(carPoint.getSiblingIndex()===7){
-                    carPoint.name = "lock"
-                    carPoint.children[0].children[0].active = false
-                    carPoint.children[0].children[1].active = true
-                }else {
-                    carPoint.name = "empty"
-                }
-                this.carExitUpdate(carPoint)
+        // console.log("exitCarUi:", find("Scene/Levels").children.length, find("Scene/Levels").children[0].children.length, find("Scene/Roles").children.length)
+        // 判定胜利
+        if (CarColorsEntryCreat.instance.bussCenter.activeCar.size === 0){
+            if (find("Scene/Roles").children.length === 0){
+                CarColorsEntryCreat.instance.carUiCenter.showUI(UINames.CarSuccPanel)
+                CarColorsEntryCreat.instance.carUiCenter.hideUI(UINames.GamePanel)
             }
-        })
-        .start()
-
-        this.tweenCount += 1
-        this.roleNum += 1
-        if (this.carType === CarTypes.Minivan){
-            this.isFull = this.roleNum > 5
-        }else if (this.carType === CarTypes.Sedan){
-            this.isFull = this.roleNum > 3
-        }else if (this.carType === CarTypes.Bus){
-            this.isFull = this.roleNum > 9
         }
-
-        return this.isFull
     }
 
     bussColorUpdate(){
@@ -133,6 +97,43 @@ export class bussColorsComponent extends Component {
         .to(0.2, {scale: new Vec3(1.4,1.4,1.4)})
         .to(0.2, {scale: new Vec3(0.95,0.95,0.95)})
         .start()
+    }
+
+    grantCarRole(role: Node): boolean{
+        const carPoint = this.node.parent
+        role.setParent(this.node.getChildByName("Seets").children[this.roleNum],true)
+        role.getComponent(heroBussColorsComponent).startWalkAnimi()
+        tween(role).to(0.2,{
+            position: new Vec3(0,0,-0.1)
+        }).call(()=>{
+            this.tweenCount -= 1
+            role.setScale(0.9,0.9,0.9)
+            role.setRotationFromEuler(0,0,0)
+            role.getComponent(heroBussColorsComponent).startSitAnimi()
+            if (this.tweenCount <= 0 && this.isFull){
+                if(carPoint.getSiblingIndex()===7){
+                    carPoint.name = "lock"
+                    carPoint.children[0].children[0].active = false
+                    carPoint.children[0].children[1].active = true
+                }else {
+                    carPoint.name = "empty"
+                }
+                this.carExitUpdateUi(carPoint)
+            }
+        })
+        .start()
+
+        this.tweenCount += 1
+        this.roleNum += 1
+        if (this.carType === CarTypes.Minivan){
+            this.isFull = this.roleNum > 5
+        }else if (this.carType === CarTypes.Sedan){
+            this.isFull = this.roleNum > 3
+        }else if (this.carType === CarTypes.Bus){
+            this.isFull = this.roleNum > 9
+        }
+
+        return this.isFull
     }
 }
 

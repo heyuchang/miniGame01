@@ -24,37 +24,59 @@ export class BussGameDataSave {
         return this._instance;
     }
 
-    private _data: {[key: string]: any} = {}
+    private _dataInfo: {[key: string]: any} = {}
     private get data() {
-        return this._data
+        return this._dataInfo
     }
     public setData(key: string, value: any){
-        this._data[key] = value
+        this._dataInfo[key] = value
     }
     public getData(key: string){
-        if(this._data[key] === undefined){
+        if(this._dataInfo[key] === undefined){
             return null
         }
-        return this._data[key]
+        return this._dataInfo[key]
     }
 
 
-    private _configData: {[key: string]: any} = {}
+    private _configInfoData: {[key: string]: any} = {}
     private get configData() {
-        return this._configData
+        return this._configInfoData
     }
     public setConfigData(key: string, value: any){
-        this._configData[key] = value
+        this._configInfoData[key] = value
         this.save()
     }
     public getConfigData(key: string){
-        if(this._configData[key] === undefined){
+        if(this._configInfoData[key] === undefined){
             return null
         }
-        return this._configData[key]
+        return this._configInfoData[key]
     }
 
     path: string = ''
+
+    getConfigPath () {
+
+        var platform: any = sys.platform;
+
+        var path: any = "";
+
+        if (platform === sys.OS.WINDOWS) {
+            path = "src/conf";
+        } else if (platform === sys.OS.LINUX) {
+            path = "./conf";
+        } else {
+            if (sys.isNative) {
+                path = native.fileUtils.getWritablePath();
+                path = path + "conf";
+            } else {
+                path = "src/conf";
+            }
+        }
+
+        return path;
+    }
 
     init(){
         this.path = this.getConfigPath()
@@ -66,16 +88,16 @@ export class BussGameDataSave {
             content = sys.localStorage.getItem("CarConfigData");
         }
         if (content){
-            this._configData = JSON.parse(content) || {}
+            this._configInfoData = JSON.parse(content) || {}
         }else {
-            this._configData = {}
+            this._configInfoData = {}
         }
         
     }
     
     public save () {
         // 写入文件
-        var str = JSON.stringify(this._configData);
+        var str = JSON.stringify(this._configInfoData);
 
         // // 加密代码
         // if (cc.game.config["encript"]) {
@@ -99,25 +121,4 @@ export class BussGameDataSave {
 
     }
     
-    getConfigPath () {
-
-        var platform: any = sys.platform;
-
-        var path: any = "";
-
-        if (platform === sys.OS.WINDOWS) {
-            path = "src/conf";
-        } else if (platform === sys.OS.LINUX) {
-            path = "./conf";
-        } else {
-            if (sys.isNative) {
-                path = native.fileUtils.getWritablePath();
-                path = path + "conf";
-            } else {
-                path = "src/conf";
-            }
-        }
-
-        return path;
-    }
 }
